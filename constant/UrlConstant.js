@@ -7,7 +7,8 @@
 
 
 // 服务器域名
-const baseUrl = 'https://app.demo.winqi.cn/';
+const baseUrl = 'http://localhost:8012/';
+// const baseUrl = 'https://app.demo.winqi.cn/';
 //const baseUrl = 'http://hc.demo.winqi.cn:8012/';
 const hcBaseUrl = 'https://hc.demo.winqi.cn';
 
