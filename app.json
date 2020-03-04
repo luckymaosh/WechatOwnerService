@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/test/test",
     "pages/my/myHouse",
     "pages/bindOwner/bindOwner",
     "pages/viewBindOwner/viewBindOwner",
@@ -68,6 +69,12 @@
         "text": "我的",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/mySelected.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "test",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "images/home-selected.png"
       }
     ]
   },
