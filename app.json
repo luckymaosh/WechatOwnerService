@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/test/test",
     "pages/my/myHouse",
     "pages/bindOwner/bindOwner",
     "pages/viewBindOwner/viewBindOwner",
@@ -42,12 +43,12 @@
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#00AA00",
-    "navigationBarTitleText": "HC智慧小区"
+    "navigationBarBackgroundColor": "#50AF54",
+    "navigationBarTitleText": "车位出租"
   },
   "tabBar": {
     "color": "#272636",
-    "selectedColor": "#00AA00",
+    "selectedColor": "#50AF54",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
@@ -58,7 +59,7 @@
         "selectedIconPath": "images/home-selected.png"
       },
       {
-        "pagePath": "pages/openDoor/openDoor",
+        "pagePath": "pages/test/test",
         "text": "开门",
         "iconPath": "images/applicationKey.png",
         "selectedIconPath": "images/applicationKey-selected.png"

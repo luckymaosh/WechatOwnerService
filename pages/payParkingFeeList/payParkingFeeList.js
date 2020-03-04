@@ -150,7 +150,7 @@ Page({
       },
       fail: function(e) {
         wx.showToast({
-          title: "服务器异常了",
+          title: "获取业主车位，服务器异常了",
           icon: 'none',
           duration: 2000
         })

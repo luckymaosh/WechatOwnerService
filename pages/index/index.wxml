@@ -1,11 +1,7 @@
 <import src="../common/sort_list.wxml" />
 
 <view>
-  <van-notice-bar
-      left-icon="volume-o"
-      text="HC智慧家园是免费开源的HC小区管理系统的分支项目，欢迎访问官网http://homecommunity.cn了解"
-      speed="30"
-    />
+ 
 </view>
 
 <scroll-view bindscrolltolower="lower" class="scroll-restaurants-list" scroll-y="true" style="height:100%">
@@ -25,14 +21,12 @@
     <block wx:for="{{categoryList}}" wx:key="index">
       <swiper-item>
         <block wx:for="{{item}}" wx:key="index">
-        <!-- <navigator url="{{item.href}}"> -->
           <view class="category-info">
            <navigator url="{{item.href}}">
             <image src="{{item.src}}" class="category-image"></image>
             <view class="category-text">{{item.name}}</view>
             </navigator> 
           </view>
-          <!-- </navigator> -->
         </block>
       </swiper-item>
     </block>
@@ -50,6 +44,37 @@
     <text class="new">小区文化</text>
     <text class="iconfont icongengduo1 gd" catchtap="_moreActivities"></text>
   </view>
+
+  <view class="ppfl_c"  wx:for="{{moreParkingSpaces}}" wx:for-index="idx" wx:for-item="item"  >
+    <van-panel title="{{item.num}}号停车位" desc="" status="{{item.feeStateName}}状态" use-footer-slot>
+      <view class="ppfl_context">
+        <van-row >
+          <van-col span="5">车牌号码:</van-col>
+          <van-col span="7">{{item.carNum}}</van-col>
+          <van-col span="5">费用类型:</van-col>
+          <van-col span="7">{{item.feeName}}</van-col>
+        </van-row>
+        <van-row class="ppfl_context_row">
+          <van-col span="5">车位类型:</van-col>
+          <van-col span="7">{{item.feeTypeCdName}}</van-col>
+          <van-col span="5">费用类型:</van-col>
+          <van-col span="7">{{item.stateName}}费用</van-col>  
+        </van-row>
+        <van-row class="ppfl_context_row">
+          <van-col span="5">每月金额:</van-col>
+          <van-col span="7">{{item.feePrice}}元</van-col>
+          <van-col span="5">到期时间:</van-col>
+          <van-col span="7">{{item.endTime}}</van-col>
+        </van-row>
+      </view>
+      <view slot="footer" class="ppfl_footer">
+        <van-button size="small" class="ppfl_footer_his" bind:click="payFeeDetail" data-item="{{item}}">缴费历史</van-button>
+        <van-button size="small" type="primary" wx:if="{{item.state == 'H'}}" bind:click="payFee" data-item="{{item}}">缴费</van-button>
+      </view>
+    </van-panel>
+
+  </view>
+
   <view class="noticesList">
     <block wx:for="{{notices}}" wx:key="index">
       <navigator url="/pages/activitesDetail/activitesDetail?activitiesId={{item.activitiesId}}&title={{item.title}}&communityId={{item.communityId}}">
