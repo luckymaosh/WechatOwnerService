@@ -7,7 +7,8 @@
 
 
 // 服务器域名
-const baseUrl = 'https://app.demo.winqi.cn/';
+const baseUrl = 'http://localhost:8012/';
+// const baseUrl = 'https://app.demo.winqi.cn/';
 //const baseUrl = 'http://hc.demo.winqi.cn:8012/';
 const hcBaseUrl = 'https://hc.demo.winqi.cn';
 
@@ -37,7 +38,7 @@ const queryRoomsByOwner = baseUrl + 'app/room.queryRoomsByOwner';
 const appUserBindingOwner = baseUrl + 'app/owner.appUserBindingOwner';
 
 //查询绑定业主
-const queryAppUserBindingOwner = baseUrl + 'app/owner.listAppUserBindingOwners';
+const queryAppUserBindingOwner = baseUrl + 'app/owner/listAppUserBindingOwners';
 
 
 
