@@ -43,12 +43,12 @@
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#00AA00",
+    "navigationBarBackgroundColor": "#50AF54",
     "navigationBarTitleText": "HC智慧小区"
   },
   "tabBar": {
     "color": "#272636",
-    "selectedColor": "#00AA00",
+    "selectedColor": "#50AF54",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
